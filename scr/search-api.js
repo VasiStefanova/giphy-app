@@ -1,4 +1,4 @@
-let APIKEY = "mz7BQ5LzMjrvdnaBJoaUCkwMDO8Xb7GX";
+const APIKEY = "mz7BQ5LzMjrvdnaBJoaUCkwMDO8Xb7GX";
 document.addEventListener("DOMContentLoaded", search);
 function search() {
     const searchEventHandler = ev => {
@@ -12,7 +12,7 @@ function search() {
                     const figure = document.createElement("figure");
                     const img = document.createElement("img");
                     const figCaption = document.createElement("figcaption");
-                    const button = document.createElement("button");
+                    const button = document.createElement("button")
                     button.innerHTML = "View Details";
                     img.src = element.images.downsized.url;
                     img.alt = element.title;
