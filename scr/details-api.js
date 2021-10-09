@@ -1,18 +1,24 @@
 import * as utils from "./utils.js"
 
-const url = `https://api.giphy.com/v1/gifs/{gif_id}?api_key=${utils.APIKEY}`;
-const getGifById = (gifId = 0) => gif.find((g) => g.id === gifId);
+export function showDetails(id) {
+    const url = `https://api.giphy.com/v1/gifs/${id}?api_key=${utils.APIKEY}`;
+    fetch(url)
+        .then(response => response.json())
+        .then(content => {
 
-function showDetails(id) {
-    const gif = getGifById(id);
+            const htmlDiv = `
+            <div class="gifDetails">
+            <img src= ${content.data.images.downsized.url}>
+            <h2>title: ${content.data.title}</h2>
+            <h2>rating: ${content.data.rating}</h2>
+            <h2>username: ${content.data.username}</h2>
+            <h2>slug: ${content.data.slug}</h2>
+            </div>
+           `
+            const container = document.querySelector(".container");
+            container.innerHTML = '';
+            container.innerHTML = htmlDiv;
+        })
 
-    return`
-    <div class="gifDetails">
-    <h2>title: ${gif.title}</h2>
-    <h2>rating: ${gif.rating}</h2>
-    <h2>username: ${gif.username}</h2>
-    <h2>slug: ${gif.slug}</h2>
-    <h2>source: ${gif.source_tld}</h2>
-    `
+        .catch(err => console.error(err));
 }
- 

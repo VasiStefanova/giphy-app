@@ -1,8 +1,8 @@
 import * as utils from "./utils.js"
 const input = document.querySelector('input[type="file"]');
-input.addEventListener('change', upload.bind(upload, id));
+input.addEventListener('change', upload);
 
-function upload(id, ev) {
+function upload() {
     console.log(arguments);
     const formData = new FormData();
     formData.append('file', input.files[0]);

@@ -1,4 +1,5 @@
 import * as utils from "./utils.js"
+import { showDetails } from "./details-api.js"
 
 document.addEventListener("DOMContentLoaded", trending);
 function trending() {
@@ -14,6 +15,7 @@ function trending() {
                     const figCaption = document.createElement("figcaption");
                     const button = document.createElement("button");
                     button.innerHTML = "View Details";
+                    button.addEventListener("click", () => showDetails(element.id));
                     img.src = element.images.downsized.url;
                     img.alt = element.title;
                     figCaption.textContent = element.title;
