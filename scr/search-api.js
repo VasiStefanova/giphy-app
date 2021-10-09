@@ -1,10 +1,11 @@
-const APIKEY = "mz7BQ5LzMjrvdnaBJoaUCkwMDO8Xb7GX";
+import * as utils from "./utils.js"
+
 document.addEventListener("DOMContentLoaded", search);
 function search() {
     const searchEventHandler = ev => {
         ev.preventDefault()
         const str = document.getElementById("search").value;
-        const url = `https://api.giphy.com/v1/gifs/search?api_key=${APIKEY}&limit=20&q=${encodeURI(str)}`;
+        const url = `https://api.giphy.com/v1/gifs/search?api_key=${utils.APIKEY}&limit=20&q=${encodeURI(str)}`;
         fetch(url)
             .then(response => response.json())
             .then(content => {
@@ -32,4 +33,9 @@ function search() {
             .catch(err => console.error(err));
     }
     document.getElementById("btnSearch").addEventListener("click", searchEventHandler);
+    document.getElementById("search").addEventListener('keyup', event => {
+        if (event.keyCode === 13) {
+            return searchEventHandler(event);
+        }
+    });
 }
