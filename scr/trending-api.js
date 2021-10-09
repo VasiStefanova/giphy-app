@@ -1,8 +1,10 @@
+import * as utils from "./utils.js"
+
 document.addEventListener("DOMContentLoaded", trending);
 function trending() {
     const trendingEventHandler = ev => {
         ev.preventDefault()
-        const url = `https://api.giphy.com/v1/gifs/trending?api_key=${APIKEY}&limit=20`;
+        const url = `https://api.giphy.com/v1/gifs/trending?api_key=${utils.APIKEY}&limit=20`;
         fetch(url)
             .then(response => response.json())
             .then(content => {
@@ -10,7 +12,7 @@ function trending() {
                     const figure = document.createElement("figure");
                     const img = document.createElement("img");
                     const figCaption = document.createElement("figcaption");
-                    const button = document.createElement("button")
+                    const button = document.createElement("button");
                     button.innerHTML = "View Details";
                     img.src = element.images.downsized.url;
                     img.alt = element.title;
