@@ -20,11 +20,13 @@
                         aria-label="Recipient's username" aria-describedby="button-addon2">
                     <button id="btnSearch" class="btn btn-primary" type="button" id="button-addon2">Search</button>
                 </div>
+                <div class="form-group">
+                    <input class="form-control" type="file" id="formFile">
+                </div>
             </div>
             </div>
             <div class="form-group">
                 <button id="btnTrending" class="btn btn-outline-warning">Trending</button>
-                <button id="btnUpload" class="btn btn-outline-warning">Upload GIF</button>
             </div>
         </form>
         <div class="container"></div>
@@ -38,8 +40,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-    <script src="scr/search-api.js"></script>
-    <script src="scr/trending-api.js"></script>
+    <script type="module" src="scr/search-api.js"></script>
+    <script type="module" src="scr/trending-api.js"></script>
+    <script type="module" src="scr/uploadGIF-api.js"></script>
 </body>
 
 </html>
