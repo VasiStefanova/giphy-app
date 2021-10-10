@@ -16,7 +16,7 @@ function trending() {
                     const button = document.createElement("button");
                     button.innerHTML = "View Details";
                     button.addEventListener("click", () => showDetails(element.id));
-                    img.src = element.images.downsized.url;
+                    img.src = element.images.original.url;
                     img.alt = element.title;
                     figCaption.textContent = element.title;
                     figure.appendChild(img);
@@ -31,6 +31,6 @@ function trending() {
                 container.append(...figures);
             })
             .catch(err => console.error(err));
-    }
+    };
     document.getElementById("btnTrending").addEventListener("click", trendingEventHandler);
 }

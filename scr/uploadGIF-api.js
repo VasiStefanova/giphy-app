@@ -13,6 +13,9 @@ function upload() {
     })
         .then(response => response.json())
         .then(result => {
+            const uploadedGIFs = utils.getUploadsFromStorage();
+            uploadedGIFs.push(result.data.id);
+            localStorage.setItem('uploads', JSON.stringify(uploadedGIFs));
             console.log('Success:', result);
         })
         .catch(error => {
