@@ -1,0 +1,24 @@
+{
+  "name": "giphy-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/MaxKsanthis/giphy-project.git"
+  },
+  "author": "Vasi, Max",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/MaxKsanthis/giphy-project/issues"
+  },
+  "homepage": "https://gitlab.com/MaxKsanthis/giphy-project#readme",
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "eslint-config-google": "^0.14.0"
+  }
+}
