@@ -3,7 +3,11 @@ import { showDetails } from "./details-api.js"
 import { generateCard } from "./card.js";
 
 document.addEventListener("DOMContentLoaded", search);
-//documentation//
+/**
+ * Search gifs by a given query.
+ *
+ * @return {string}  Returns an html string.
+ */
 function search() {
     const searchField = document.getElementById("search");
     const searchEventHandler = ev => {

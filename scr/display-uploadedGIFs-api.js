@@ -1,6 +1,10 @@
 import * as utils from "./utils.js"
 document.addEventListener("DOMContentLoaded", displayUploadedGifs);
-//documentation//
+/**
+ * Display the uploaded gif from his file system.
+ *
+ * @return {string}  Returns an html string.
+ */
 function displayUploadedGifs() {
     const displayUploadedGifsHandler = ev => {
         const uploadedGifs = utils.getUploadsFromStorage();

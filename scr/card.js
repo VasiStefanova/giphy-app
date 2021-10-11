@@ -1,4 +1,9 @@
-//documentation//
+/**
+ * Displays the gif as a card
+ *
+ * @param {object} gifData The id of the gif.
+ * @return {string}  Returns an html string.
+ */
 export const generateCard = (gifData) => {
     return `<div class="card border-primary mb-3">
   <div class="card-body">

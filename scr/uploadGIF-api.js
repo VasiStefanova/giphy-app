@@ -2,7 +2,10 @@ import * as utils from "./utils.js"
 const input = document.querySelector('input[type="file"]');
 input.addEventListener('change', upload);
 
-//documentation//
+/**
+ * Upload a gif from his file system.
+ *
+ */
 function upload() {
     console.log(arguments);
     const formData = new FormData();

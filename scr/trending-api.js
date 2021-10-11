@@ -2,7 +2,11 @@ import * as utils from "./utils.js"
 import { showDetails } from "./details-api.js"
 
 document.addEventListener("DOMContentLoaded", trending);
-//documentation//
+/**
+ * See the top trending gifs. 
+ *
+ * @return {string}  Returns an html string.
+ */
 function trending() {
     const trendingEventHandler = ev => {
         ev.preventDefault()
