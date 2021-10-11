@@ -1,20 +1,46 @@
+import {showDetails} from './details-api.js';
+/* eslint-disable max-len */
 /**
- * Displays the gif as a card
+ * Displays the gif as a card.
  *
  * @param {object} gifData The id of the gif.
- * @return {string}  Returns an html string.
+ * @return {HTMLDivElement}  Returns an html div element.
  */
 export const generateCard = (gifData) => {
-    return `<div class="card border-primary mb-3">
-  <div class="card-body">
-    <h5 class="card-title">${gifData.title}</h5>
-  </div>
-  <img src="${gifData.images.original.url}" class="d-block user-select-none" width="100%" height="200" aria-label="Placeholder: Image cap" focusable="false" role="img" preserveAspectRatio="xMidYMid slice" viewBox="0 0 318 180" style="font-size:1.125rem;text-anchor:middle">
-    <rect width="100%" height="100%" fill="#868e96"></rect>
-  <div class="card-body">
-    <p class="card-text">Added by ${gifData.username}</p>
-  </div>
-  <div class="card-body">
-    <button id="show-details" type="button" class="btn btn-outline-primary">View Details</button>
-  </div>`
+  const card = document.createElement('div');
+  card.classList.add('card', 'border-primary', 'mb-3');
+  const cardTitle = document.createElement('div');
+  cardTitle.classList.add('card-body');
+  const title = document.createElement('h5');
+  title.classList.add('card-title');
+  title.innerText = gifData.title;
+  const img = document.createElement('img');
+  img.src = gifData.images.original.url;
+  img.classList.add('cd-block', 'user-select-none');
+  img.style.width = '100%';
+  img.style.height = '250px';
+  const divParagraph = document.createElement('div');
+  divParagraph.classList.add('card-body');
+  const paragraph = document.createElement('p');
+  paragraph.classList.add('card-text');
+  paragraph.innerText = `Added by ${gifData.username}`;
+  const divButton = document.createElement('div');
+  divButton.classList.add('card-body');
+  const button = document.createElement('button');
+  button.id = 'show-details';
+  button.type = 'button';
+  button.classList.add('btn', 'btn-outline-primary');
+  button.innerText = 'View Details';
+  button.addEventListener('click', () => showDetails(gifData.id));
+
+  cardTitle.appendChild(title);
+  divParagraph.appendChild(paragraph);
+  divButton.appendChild(button);
+
+  card.appendChild(cardTitle);
+  card.appendChild(img);
+  card.appendChild(divParagraph);
+  card.appendChild(divButton);
+
+  return card;
 };
