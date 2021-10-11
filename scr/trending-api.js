@@ -2,6 +2,7 @@ import * as utils from "./utils.js"
 import { showDetails } from "./details-api.js"
 
 document.addEventListener("DOMContentLoaded", trending);
+//documentation//
 function trending() {
     const trendingEventHandler = ev => {
         ev.preventDefault()

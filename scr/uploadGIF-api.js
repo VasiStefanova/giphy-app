@@ -2,6 +2,7 @@ import * as utils from "./utils.js"
 const input = document.querySelector('input[type="file"]');
 input.addEventListener('change', upload);
 
+//documentation//
 function upload() {
     console.log(arguments);
     const formData = new FormData();

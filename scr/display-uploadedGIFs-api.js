@@ -1,6 +1,6 @@
 import * as utils from "./utils.js"
 document.addEventListener("DOMContentLoaded", displayUploadedGifs);
-
+//documentation//
 function displayUploadedGifs() {
     const displayUploadedGifsHandler = ev => {
         const uploadedGifs = utils.getUploadsFromStorage();
