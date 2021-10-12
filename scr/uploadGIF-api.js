@@ -5,7 +5,7 @@ const input = document.querySelector('input[type="file"]');
  * Upload a gif from his file system.
  *
  */
-export function upload() {
+export const upload = () => {
   const formData = new FormData();
   formData.append('file', input.files[0]);
 

@@ -5,7 +5,7 @@ import * as utils from './utils.js';
  * @param {string} id The id of the gif.
  * @return {string}  Returns an html string.
  */
-export function showDetails(id) {
+export const showDetails = (id) => {
   const url = `https://api.giphy.com/v1/gifs/${id}?api_key=${utils.APIKEY}`;
   fetch(url)
       .then((response) => response.json())

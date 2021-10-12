@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import * as utils from './utils.js';
 import {generateCard} from './card.js';
 
@@ -7,7 +8,7 @@ import {generateCard} from './card.js';
  *
  * @return {string}  Returns an html string.
  */
-export function search() {
+export const search = () => {
   const searchField = document.getElementById('search');
   const searchEventHandler = (ev) => {
     ev.preventDefault();

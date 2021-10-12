@@ -1,5 +1,6 @@
+/* eslint-disable max-len */
 import * as utils from './utils.js';
-import {showDetails} from './details-api.js';
+import {generateCard} from './card.js';
 
 
 /**
@@ -7,36 +8,39 @@ import {showDetails} from './details-api.js';
  *
  * @return {string}  Returns an html string.
  */
-export function trending() {
+export const trending = () => {
   const trendingEventHandler = (ev) => {
     ev.preventDefault();
     const url = `https://api.giphy.com/v1/gifs/trending?api_key=${utils.APIKEY}&limit=20`;
     fetch(url)
         .then((response) => response.json())
         .then((content) => {
-          const figures = content.data.map((element) => {
-            const figure = document.createElement('figure');
-            const img = document.createElement('img');
-            const figCaption = document.createElement('figcaption');
-            const button = document.createElement('button');
-            button.innerHTML = 'View Details';
-            button.addEventListener('click', () => showDetails(element.id));
-            img.src = element.images.original.url;
-            img.alt = element.title;
-            figCaption.textContent = element.title;
-            figure.appendChild(img);
-            figure.appendChild(figCaption);
-            figure.appendChild(button);
+          const mappedContent = content.data.reduce((acc, X, Y, gifCollection) => {
+            if (gifCollection.length) {
+              const groupOfGifs = gifCollection.splice(0, 4);
+              acc.push(groupOfGifs);
+            }
+            return acc;
+          }, []);
+          const divRows = mappedContent.map((row) => {
+            const rowDiv = document.createElement('div');
+            rowDiv.classList.add('row');
+            row.forEach((element) => {
+              const card = generateCard(element);
+              const colDiv = document.createElement('div');
+              colDiv.classList.add('col-sm');
+              colDiv.innerHTML = card;
+              rowDiv.appendChild(colDiv);
+            });
 
-            return figure;
+            return rowDiv;
           });
 
           const container = document.querySelector('.container');
           container.innerHTML = '';
-          container.append(...figures);
+          container.append(...divRows);
         })
         .catch((err) => console.error(err));
   };
-  document.getElementById('btnTrending')
-      .addEventListener('click', trendingEventHandler);
+  document.getElementById('btnTrending').addEventListener('click', trendingEventHandler);
 };
