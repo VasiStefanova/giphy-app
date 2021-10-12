@@ -1,5 +1,4 @@
 import * as utils from './utils.js';
-import {showDetails} from './details-api.js';
 import {generateCard} from './card.js';
 
 document.addEventListener('DOMContentLoaded', search);
@@ -28,7 +27,6 @@ function search() {
             const rowDiv = document.createElement('div');
             rowDiv.classList.add('row');
             row.forEach((element) => {
-              console.log(element);
               const card = generateCard(element);
               const colDiv = document.createElement('div');
               colDiv.classList.add('col-sm');

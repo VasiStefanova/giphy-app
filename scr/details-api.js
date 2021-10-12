@@ -1,4 +1,4 @@
-import * as utils from "./utils.js"
+import * as utils from './utils.js';
 /**
  * See a given gif’s detailed information like uploaded user’s username...
  *
@@ -6,12 +6,11 @@ import * as utils from "./utils.js"
  * @return {string}  Returns an html string.
  */
 export function showDetails(id) {
-    const url = `https://api.giphy.com/v1/gifs/${id}?api_key=${utils.APIKEY}`;
-    fetch(url)
-        .then(response => response.json())
-        .then(content => {
-
-            const htmlDiv = `
+  const url = `https://api.giphy.com/v1/gifs/${id}?api_key=${utils.APIKEY}`;
+  fetch(url)
+      .then((response) => response.json())
+      .then((content) => {
+        const htmlDiv = `
             <div class="gifDetails">
             <img src= ${content.data.images.downsized.url}>
             <h2>title: ${content.data.title}</h2>
@@ -19,11 +18,11 @@ export function showDetails(id) {
             <h2>username: ${content.data.username}</h2>
             <h2>slug: ${content.data.slug}</h2>
             </div>
-           `
-            const container = document.querySelector(".container");
-            container.innerHTML = '';
-            container.innerHTML = htmlDiv;
-        })
+           `;
+        const container = document.querySelector('.container');
+        container.innerHTML = '';
+        container.innerHTML = htmlDiv;
+      })
 
-        .catch(err => console.error(err));
+      .catch((err) => console.error(err));
 }
