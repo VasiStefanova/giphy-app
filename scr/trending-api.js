@@ -1,13 +1,13 @@
 import * as utils from './utils.js';
 import {showDetails} from './details-api.js';
 
-document.addEventListener('DOMContentLoaded', trending);
+
 /**
  * See the top trending gifs.
  *
  * @return {string}  Returns an html string.
  */
-function trending() {
+export function trending() {
   const trendingEventHandler = (ev) => {
     ev.preventDefault();
     const url = `https://api.giphy.com/v1/gifs/trending?api_key=${utils.APIKEY}&limit=20`;

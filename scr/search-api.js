@@ -1,13 +1,13 @@
 import * as utils from './utils.js';
 import {generateCard} from './card.js';
 
-document.addEventListener('DOMContentLoaded', search);
+
 /**
  * Search gifs by a given query.
  *
  * @return {string}  Returns an html string.
  */
-function search() {
+export function search() {
   const searchField = document.getElementById('search');
   const searchEventHandler = (ev) => {
     ev.preventDefault();
