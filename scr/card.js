@@ -12,9 +12,9 @@ export const generateCard = (gifData) => {
   <div class="card-body">
     <h5 class="card-title">${gifData.title}</h5>
   </div>
-  <img src="${gifData.images.original.url}" class="d-block user-select-none" width="100%" height="200">
+  <img src="${gifData.images.downsized.url}" class="d-block user-select-none" width="100%" height="200">
   <div class="card-body">
-    <p class="card-text">Added by ${gifData.username}</p>
+    <p class="card-text">Added by ${gifData.username ? gifData.username : 'n/a'}</p>
   </div>
   <div class="card-body">
     <button id=${gifData.id} type="button" class="btn btn-outline-primary view-details">View Details</button>

@@ -1,4 +1,4 @@
-import { viewDetailsCard } from './details-card.js';
+import {viewDetailsCard} from './details-card.js';
 import * as utils from './utils.js';
 /**
  * See a given gif’s detailed information like uploaded user’s username...
@@ -11,6 +11,7 @@ export const showDetails = (id) => {
   fetch(url)
       .then((response) => response.json())
       .then((content) => {
+        console.log(content);
         const htmlDiv = viewDetailsCard(content.data);
         const container = document.querySelector('.container');
         container.innerHTML = '';

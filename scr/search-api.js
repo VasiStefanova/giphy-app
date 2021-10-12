@@ -20,4 +20,3 @@ export const search = () => {
       })
       .catch((err) => console.error(err));
 };
-
