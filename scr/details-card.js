@@ -1,29 +1,16 @@
+/* eslint-disable max-len */
 // eslint-disable-next-line padded-blocks
 export const viewDetailsCard = (gifData) => {
 
-  return `<h1>${gifData.title}</h1>
-  <div class="gif-detailed">
-    <div class="poster">
-      <img src="${gifData.images.original.url}">
-    </div>
-    <div class="gif-info">
-      <p>Added by: ${gifData.username}</p>
-    </div>
+  return `<div id="card-details" class="card border-secondary mb-3" style="width: 25rem; margin: auto;">
+  <img class="card-img-top" src="${gifData.images.original.url}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">${gifData.title}</h5>
   </div>
-  `
-
-
-
-
-
-
-//   `<div class="card border-primary mb-3">
-//   <div class="card-body">
-//     <h5 class="card-title">${gifData.title}</h5>
-//   </div>
-//   <img src="${gifData.images.original.url}" class="d-block user-select-none" width="100%" height="200">
-//   <div class="card-body">
-//     <p class="card-text">Added by ${gifData.username}</p>
-//   </div>
-//   `;
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Added by: ${gifData.username ? gifData.username : 'n/a'}</li>
+    <li class="list-group-item">Added on: ${gifData.import_datetime}</li>
+    <li class="list-group-item">Rating: ${gifData.rating}</li>
+  </ul>
+</div>`;
 };
