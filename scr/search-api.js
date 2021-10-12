@@ -30,7 +30,7 @@ export function search() {
               const card = generateCard(element);
               const colDiv = document.createElement('div');
               colDiv.classList.add('col-sm');
-              colDiv.appendChild(card);
+              colDiv.innerHTML = card;
               rowDiv.appendChild(colDiv);
             });
 
