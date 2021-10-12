@@ -1,11 +1,11 @@
 import * as utils from './utils.js';
-const input = document.querySelector('input[type="file"]');
 
 /**
  * Upload a gif from his file system.
  *
  */
 export const upload = () => {
+  const input = document.querySelector('input[type="file"]');
   const formData = new FormData();
   formData.append('file', input.files[0]);
 
