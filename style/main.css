@@ -6,3 +6,11 @@ html {
 body {
     background-image: none;
 }
+
+div.container {
+    padding: 20px;
+}
+
+.nav-item > a {
+    cursor: pointer;
+}
