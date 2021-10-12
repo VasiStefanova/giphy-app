@@ -5,6 +5,7 @@
  * @param {object} gifData The id of the gif.
  * @return {HTMLDivElement}  Returns an html div element.
  */
+// eslint-disable-next-line padded-blocks
 export const generateCard = (gifData) => {
 
   return `<div class="card border-primary mb-3">
