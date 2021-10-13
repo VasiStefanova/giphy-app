@@ -14,3 +14,9 @@ div.container {
 .nav-item > a {
     cursor: pointer;
 }
+
+#upload-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}

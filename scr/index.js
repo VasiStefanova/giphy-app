@@ -1,14 +1,14 @@
 /* eslint-disable max-len */
 import {search} from './search-api.js';
 import {trending} from './trending-api.js';
-import {upload} from './uploadGIF-api.js';
 import {displayUploadedGifs} from './display-uploadedGIFs-api.js';
 import {showDetails} from './details-api.js';
 import {showUpload} from './upload-view.js';
+import {showUploadFileInfo} from './upload-file-view.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('click', (event) => {
-    //   event.preventDefault();
+    // event.preventDefault();
     if (event.target.classList.contains('view-details')) {
       showDetails(event.target.id);
     } else {
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
           break;
         case 'btnUpload':
           showUpload();
-          document.querySelector('input[type="file"]').addEventListener('change', upload);
+          document.querySelector('input[type="file"]').addEventListener('change', showUploadFileInfo);
           break;
       }
     }

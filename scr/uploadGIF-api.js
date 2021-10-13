@@ -1,4 +1,5 @@
 import * as utils from './utils.js';
+import {showUpload} from './upload-view.js';
 
 /**
  * Upload a gif from his file system.
@@ -23,5 +24,8 @@ export const upload = () => {
       .catch((error) => {
         console.error('Error:', error);
       })
-      .finally(() => input.value = '');
+      .finally(() => {
+        // input.value = ''
+        showUpload();
+      });
 };
