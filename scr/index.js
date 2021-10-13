@@ -5,6 +5,7 @@ import {displayUploadedGifs} from './api-functionalities/display-uploadedGIFs-ap
 import {showDetails} from './api-functionalities/details-api.js';
 import {showUpload} from './views/upload-view.js';
 import {showUploadFileInfo} from './views/upload-file-view.js';
+import {showHomeView} from './views/home-view.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('click', (event) => {
@@ -24,6 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
         case 'btnUpload':
           showUpload();
           document.querySelector('input[type="file"]').addEventListener('change', showUploadFileInfo);
+          break;
+        case 'btnHOME':
+          showHomeView();
           break;
       }
     }
