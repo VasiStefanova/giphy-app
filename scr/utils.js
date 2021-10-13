@@ -11,3 +11,16 @@ export const getUploadsFromStorage = () => {
 
   return result;
 };
+
+/**
+ * Set the html container div with a given innerHTML string.
+ * @param {string} innerHTML to be placed in the container.
+ * @param {Array}  htmlElements optional - collection of html elements.
+ */
+export const setContainerContent = (innerHTML, htmlElements = []) => {
+  const container = document.querySelector('.container');
+  container.innerHTML = innerHTML;
+  if (htmlElements.length) {
+    container.append(...htmlElements);
+  }
+};

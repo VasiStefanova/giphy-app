@@ -1,4 +1,5 @@
 import {generateCard} from './card.js';
+import {setContainerContent} from '../utils.js';
 
 /**
  * Produces an html element with all cards in a grid system.
@@ -26,7 +27,6 @@ export const producer = (content) =>{
 
     return rowDiv;
   });
-  const container = document.querySelector('.container');
-  container.innerHTML = '';
-  container.append(...divRows);
+
+  setContainerContent('', divRows);
 };

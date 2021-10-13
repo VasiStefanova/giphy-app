@@ -10,11 +10,8 @@ export const showDetails = (id) => {
   fetch(url)
       .then((response) => response.json())
       .then((content) => {
-        console.log(content);
         const htmlDiv = viewDetailsCard(content.data);
-        const container = document.querySelector('.container');
-        container.innerHTML = '';
-        container.innerHTML = htmlDiv;
+        utils.setContainerContent(htmlDiv);
       })
 
       .catch((err) => console.error(err));
