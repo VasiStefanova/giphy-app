@@ -26,7 +26,6 @@ export const upload = () => {
           uploadedGIFs.push(result.data.id);
           localStorage.setItem('uploads', JSON.stringify(uploadedGIFs));
           showSuccessAlertMsg();
-          console.log('Success:', result);
         })
         .catch((error) => {
           console.error('Error:', error);
