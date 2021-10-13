@@ -1,11 +1,10 @@
 /* eslint-disable max-len */
 import * as utils from '../utils.js';
-import {producer} from '../engine/html-producer.js';
+import {producer} from '../helpers/html-producer.js';
 
 /**
- * Display the uploaded gif from his file system.
+ * Display the uploaded gifs from local storage in the browser.
  *
- * @return {string}  Returns an html string.
  */
 export const displayUploadedGifs = () => {
   const uploadedGifs = utils.getUploadsFromStorage();

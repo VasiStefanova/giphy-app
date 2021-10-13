@@ -3,7 +3,7 @@
  * Displays the gif as a card.
  *
  * @param {object} gifData The id of the gif.
- * @return {HTMLDivElement}  Returns an html div element.
+ * @return {string}  Returns an html string.
  */
 // eslint-disable-next-line padded-blocks
 export const generateCard = (gifData) => {

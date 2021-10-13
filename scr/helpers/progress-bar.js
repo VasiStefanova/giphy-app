@@ -1,4 +1,7 @@
 /* eslint-disable max-len */
+/**
+ * Produces an html div element as a progress bar.
+ */
 export const displayProgressBar = () => {
   const progressDiv = document.createElement('div');
   progressDiv.innerHTML = `

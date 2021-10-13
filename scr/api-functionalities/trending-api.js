@@ -1,9 +1,9 @@
 /* eslint-disable max-len */
-import * as utils from './utils.js';
-import {producer} from './engine/html-producer.js';
+import * as utils from '../utils.js';
+import {producer} from '../helpers/html-producer.js';
 
 /**
- * See the top trending gifs.
+ * Shows the top trending gifs.
  *
  */
 export const trending = () => {

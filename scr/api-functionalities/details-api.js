@@ -1,7 +1,7 @@
-import {viewDetailsCard} from './details-card.js';
-import * as utils from './utils.js';
+import {viewDetailsCard} from '../views/details-card.js';
+import * as utils from '../utils.js';
 /**
- * See a given gif’s detailed information like uploaded user’s username...
+ * Shows a given gif’s detailed information.
  *
  * @param {string} id The id of the gif.
  */

@@ -1,10 +1,10 @@
 import * as utils from '../utils.js';
-import {displayProgressBar} from '../progress-bar.js';
-import {showAlertMsg} from '../alert-msg.js';
-import {showSuccessAlertMsg} from '../success-alert-msg.js';
+import {displayProgressBar} from '../helpers/progress-bar.js';
+import {showAlertMsg} from '../helpers/alert-msg.js';
+import {showSuccessAlertMsg} from '../helpers/success-alert-msg.js';
 
 /**
- * Upload a gif from his file system.
+ * Upload a gif/img from the file system.
  *
  */
 export const upload = () => {

@@ -2,7 +2,7 @@
 // eslint-disable-next-line padded-blocks
 
 /**
- * Shows the details as a card
+ * Shows the details of a gif as a card.
  *
  * @param {object} gifData The object with information of the gif.
  * @return {string}  Returns an html string.
@@ -16,7 +16,7 @@ export const viewDetailsCard = (gifData) => {
   <ul class="list-group list-group-flush">
     <li class="list-group-item">Added by: ${gifData.username ? gifData.username : 'n/a'}</li>
     <li class="list-group-item">Added on: ${gifData.import_datetime}</li>
-    <li class="list-group-item">Rating: ${gifData.rating}</li>
+    <li class="list-group-item">Rating: ${gifData.rating ? gifData.rating : 'n/a'}</li>
   </ul>
 </div>`;
 };

@@ -1,3 +1,6 @@
+/**
+ * Shows an alert success message when a file is uploaded.
+ */
 export const showSuccessAlertMsg = () => {
   const container = document.querySelector('.container');
   container.innerHTML = `

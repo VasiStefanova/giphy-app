@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 /**
- * Shows the uploaded gif
+ * Shows the html input for uploading.
  *
  */
 export const showUpload = () => {

@@ -1,7 +1,6 @@
 /* eslint-disable max-len */
-import * as utils from './utils.js';
-import {producer} from './engine/html-producer.js';
-
+import * as utils from '../utils.js';
+import {producer} from '../helpers/html-producer.js';
 
 /**
  * Search gifs by a given query.

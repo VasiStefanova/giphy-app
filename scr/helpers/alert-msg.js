@@ -1,3 +1,6 @@
+/**
+ * Shows an alert message when inccorrect file type is chosen.
+ */
 export const showAlertMsg = () => {
   const container = document.querySelector('.container');
   container.innerHTML = `<div class="alert alert-dismissible alert-danger">
