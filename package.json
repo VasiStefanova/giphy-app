@@ -19,5 +19,8 @@
   "homepage": "https://gitlab.com/MaxKsanthis/giphy-project#readme",
   "devDependencies": {
     "eslint": "^7.32.0"
+  },
+  "dependencies": {
+    "eslint-config-google": "^0.14.0"
   }
 }

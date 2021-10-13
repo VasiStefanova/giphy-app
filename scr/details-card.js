@@ -1,7 +1,13 @@
 /* eslint-disable max-len */
 // eslint-disable-next-line padded-blocks
-export const viewDetailsCard = (gifData) => {
 
+/**
+ * Shows the details as a card
+ *
+ * @param {object} gifData The object with information of the gif.
+ * @return {string}  Returns an html string.
+ */
+export const viewDetailsCard = (gifData) => {
   return `<div id="card-details" class="card border-secondary mb-3" style="width: 25rem; margin: auto;">
   <img class="card-img-top" src="${gifData.images.original.url}" alt="Card image cap">
   <div class="card-body">

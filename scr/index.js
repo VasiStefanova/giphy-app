@@ -1,10 +1,10 @@
 /* eslint-disable max-len */
 import {search} from './search-api.js';
 import {trending} from './trending-api.js';
-import {displayUploadedGifs} from './display-uploadedGIFs-api.js';
+import {displayUploadedGifs} from './upload/display-uploadedGIFs-api.js';
 import {showDetails} from './details-api.js';
 import {showUpload} from './upload-view.js';
-import {showUploadFileInfo} from './upload-file-view.js';
+import {showUploadFileInfo} from './upload/upload-file-view.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('click', (event) => {

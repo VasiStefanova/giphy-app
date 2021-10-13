@@ -1,5 +1,11 @@
 /* eslint-disable max-len */
 import {upload} from './uploadGIF-api.js';
+
+/**
+ * Shows the details of the uploaded gif
+ *
+ * @param {object} event
+ */
 export const showUploadFileInfo = (event) => {
   const file = event.target.files[0];
   console.log(event.target);

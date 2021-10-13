@@ -1,5 +1,5 @@
-import * as utils from './utils.js';
-import {showUpload} from './upload-view.js';
+import * as utils from '../utils.js';
+import {showUpload} from '../upload-view.js';
 
 /**
  * Upload a gif from his file system.

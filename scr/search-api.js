@@ -1,12 +1,11 @@
 /* eslint-disable max-len */
 import * as utils from './utils.js';
-import {producer} from './html-producer.js';
+import {producer} from './engine/html-producer.js';
 
 
 /**
  * Search gifs by a given query.
  *
- * @return {string}  Returns an html string.
  */
 export const search = () => {
   const searchField = document.getElementById('search');

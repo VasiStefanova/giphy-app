@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
-import * as utils from './utils.js';
-import {producer} from './html-producer.js';
+import * as utils from '../utils.js';
+import {producer} from '../engine/html-producer.js';
 
 /**
  * Display the uploaded gif from his file system.

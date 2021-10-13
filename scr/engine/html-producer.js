@@ -1,5 +1,10 @@
 import {generateCard} from './card.js';
 
+/**
+ * Produces an html file with the information that comes from the URL.
+ *
+ * @param {object} content The data that comes from the URL
+ */
 export const producer = (content) =>{
   const mappedContent = content.data.reduce((acc, X, Y, gifCollection) => {
     if (gifCollection.length) {
